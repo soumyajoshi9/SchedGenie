@@ -12,7 +12,7 @@ export default function HomePage() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <Calendar className="h-8 w-8 text-blue-600" />
-              <h1 className="text-2xl font-bold text-gray-900">TimetableGen Pro</h1>
+              <h1 className="text-2xl font-bold text-gray-900">SchedGenie Pro</h1>
             </div>
             <Link href="/login">
               <Button variant="outline">Login</Button>
@@ -25,7 +25,7 @@ export default function HomePage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 text-balance">
-            Intelligent College Timetable Generation System
+            AI-Powered Timetable Management System
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
             Streamline your academic scheduling with AI-powered optimization, conflict resolution, and seamless
@@ -143,7 +143,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2024 TimetableGen Pro. All rights reserved.</p>
+          <p>&copy; 2024 SchedGenie Pro. All rights reserved.</p>
         </div>
       </footer>
     </div>
