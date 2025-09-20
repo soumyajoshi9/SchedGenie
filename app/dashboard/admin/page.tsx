@@ -30,12 +30,12 @@ export default function AdminDashboard() {
 
     // Mock stats data
     setStats({
-      totalTimetables: 12,
-      activeTimetables: 3,
-      totalFaculty: 45,
-      totalClassrooms: 28,
-      totalBatches: 18,
-      utilizationRate: 78,
+      totalTimetables: 3,
+      activeTimetables: 2,
+      totalFaculty: 11,
+      totalClassrooms: 11,
+      totalBatches: 6,
+      utilizationRate: 68,
     })
     setIsLoading(false)
   }, [router])

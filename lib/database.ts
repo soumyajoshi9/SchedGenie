@@ -228,10 +228,85 @@ export const seedDatabase = () => {
     headOfDepartment: "Dr. Jane Doe",
   })
 
+  const ecDept = db.departments.create({
+    name: "Electronics and Communication Engineering",
+    code: "EC",
+    headOfDepartment: "Dr. Arvind Rao",
+  })
+
+  const itDept = db.departments.create({
+    name: "Information Technology",
+    code: "IT",
+    headOfDepartment: "Dr. Sunita Kulkarni",
+  })
+
+  const meDept = db.departments.create({
+    name: "Mechanical Engineering",
+    code: "ME",
+    headOfDepartment: "Dr. Johny Liver",
+  })
+  
+  const ceDept = db.departments.create({
+    name: "Civil Engineering",
+    code: "CE",
+    headOfDepartment: "Dr. Rekha Iyer",
+  })
+
+  const cmeDept = db.departments.create({
+    name: "Chemical Engineering",
+    code: "CME",
+    headOfDepartment: "Dr. Suresh Reddy",
+  })
+
+  const aeDept = db.departments.create({
+    name: "Aerospace Engineering",
+    code: "AE",
+    headOfDepartment: "Prof. Nidhi Gupta",
+  })
+
+  const bmeDept = db.departments.create({
+    name: "Biomedical Engineering",
+    code: "BME",
+    headOfDepartment: "Dr. Sunita Sharma",
+  })
+
+  const aidsDept = db.departments.create({
+    name: "Artificial Intelligence & Data Science",
+    code: "AIDS",
+    headOfDepartment: "Dr. John Abraham",
+  })
+
+  const aimlDept = db.departments.create({
+    name: "Artificial Intelligence & Machine Learning",
+    code: "AIML",
+    headOfDepartment: "Dr. Shon Smith",
+  })
+
   // Add sample courses
   const btech = db.courses.create({
     name: "Bachelor of Technology",
     code: "BTECH",
+    departmentId: csDept.id,
+    duration: 8,
+  })
+
+  const bE = db.courses.create({
+    name: "Bachelor of Engineering",
+    code: "BE",
+    departmentId: itDept.id,
+    duration: 8,
+  })
+
+  const barc = db.courses.create({
+    name: "Bachelor of Architecture",
+    code: "BARC",
+    departmentId: ceDept.id,
+    duration: 8,
+  })
+
+  const bcom = db.courses.create({
+    name: "Bachelor of computer",
+    code: "BCOM",
     departmentId: csDept.id,
     duration: 8,
   })
@@ -247,13 +322,88 @@ export const seedDatabase = () => {
   })
 
   db.subjects.create({
+    name: "Data Structures",
+    code: "CS201",
+    credits: 4,
+    type: "practical",
+    departmentId: csDept.id,
+    semester: 3,
+  })
+
+
+  db.subjects.create({
     name: "Database Management Systems",
     code: "CS301",
     credits: 4,
     type: "theory",
     departmentId: csDept.id,
+    semester: 3,
+  })
+
+  db.subjects.create({
+    name: "Database Management Systems",
+    code: "CS301",
+    credits: 4,
+    type: "practical",
+    departmentId: csDept.id,
     semester: 5,
   })
+
+  db.subjects.create({
+    name: "Energy and Environmental Engineering",
+    code: "ES301",
+    credits: 4,
+    type: "theory",
+    departmentId: bmeDept.id,
+    semester: 3,
+  })
+
+
+  db.subjects.create({
+    name: "Discret Structure",
+    code: "CS302",
+    credits: 4,
+    type: "theory",
+    departmentId: csDept.id,
+    semester: 3,
+  })
+
+  db.subjects.create({
+    name: "OOPM",
+    code: "CS305",
+    credits: 4,
+    type: "theory",
+    departmentId: csDept.id,
+    semester: 3,
+  })
+
+  db.subjects.create({
+    name: "Computer Workshop JAVA",
+    code: "CS301",
+    credits: 4,
+    type: "practical",
+    departmentId: csDept.id,
+    semester: 3,
+  })
+
+  db.subjects.create({
+    name: "OOPM",
+    code: "CS305",
+    credits: 4,
+    type: "practical",
+    departmentId: csDept.id,
+    semester: 3,
+  })
+
+  db.subjects.create({
+    name: "Internship Project",
+    code: "BT107",
+    credits: 4,
+    type: "practical",
+    departmentId: csDept.id,
+    semester: 3,
+  })
+
 
   // Add sample faculty
   db.faculty.create({
@@ -263,6 +413,105 @@ export const seedDatabase = () => {
     departmentId: csDept.id,
     designation: "Professor",
     specialization: ["Data Structures", "Algorithms"],
+    maxHoursPerWeek: 20,
+    preferredTimeSlots: [],
+  })
+
+  db.faculty.create({
+    name: "Dr.Arvind rao",
+    email: "arvind@college.edu",
+    employeeId: "FAC003",
+    departmentId: ecDept.id,
+    designation: "Professor",
+    specialization: ["Electronic Devices"],
+    maxHoursPerWeek: 20,
+    preferredTimeSlots: [],
+  })
+
+  db.faculty.create({
+    name: "Dr. Sunita Kulkarni",
+    email: "sunita@college.edu",
+    employeeId: "FAC004",
+    departmentId: itDept.id,
+    designation: "Professor",
+    specialization: ["Data Structures", "Algorithms"],
+    maxHoursPerWeek: 20,
+    preferredTimeSlots: [],
+  })
+
+  db.faculty.create({
+    name: "Dr. Johny Liver",
+    email: "johny@college.edu",
+    employeeId: "FAC005",
+    departmentId: meDept.id,
+    designation: "Professor",
+    specialization: ["Material"],
+    maxHoursPerWeek: 20,
+    preferredTimeSlots: [],
+  })
+
+  db.faculty.create({
+    name: "Dr.Rekha Iyer",
+    email: "rekha@college.edu",
+    employeeId: "FAC006",
+    departmentId: ceDept.id,
+    designation: "Professor",
+    specialization: ["Levelling"],
+    maxHoursPerWeek: 20,
+    preferredTimeSlots: [],
+  })
+
+  db.faculty.create({
+    name: "Dr.Suresh Reddy",
+    email: "suresh@college.edu",
+    employeeId: "FAC007",
+    departmentId: cmeDept.id,
+    designation: "Professor",
+    specialization: ["Chemical Science"],
+    maxHoursPerWeek: 20,
+    preferredTimeSlots: [],
+  })
+
+  db.faculty.create({
+    name: "Dr.Vidhi Gupta",
+    email: "vidhi@college.edu",
+    employeeId: "FAC008",
+    departmentId: aeDept.id,
+    designation: "Professor",
+    specialization: ["Space Technology"],
+    maxHoursPerWeek: 20,
+    preferredTimeSlots: [],
+  })
+
+  db.faculty.create({
+    name: "Dr.Sunita Sharma",
+    email: "Sunita@college.edu",
+    employeeId: "FAC009",
+    departmentId: bmeDept.id,
+    designation: "Professor",
+    specialization: ["Bio Science"],
+    maxHoursPerWeek: 20,
+    preferredTimeSlots: [],
+  })
+  
+  db.faculty.create({
+    name: "Dr.Jonh Abraham",
+    email: "jonh@college.edu",
+    employeeId: "FAC010",
+    departmentId: aidsDept.id,
+    designation: "Professor",
+    specialization: ["Data Science"],
+    maxHoursPerWeek: 20,
+    preferredTimeSlots: [],
+  })
+
+  db.faculty.create({
+    name: "Dr.Shon Smith",
+    email: "Shon@college.edu",
+    employeeId: "FAC011",
+    departmentId: aimlDept.id,
+    designation: "Professor",
+    specialization: ["Python Programming"],
     maxHoursPerWeek: 20,
     preferredTimeSlots: [],
   })
@@ -288,6 +537,99 @@ export const seedDatabase = () => {
     isAvailable: true,
   })
 
+  db.classrooms.create({
+    name: "Room 102",
+    code: "R102",
+    capacity: 60,
+    type: "lecture_hall",
+    facilities: ["Projector", "Whiteboard", "AC"],
+    location: "Block A, First Floor",
+    isAvailable: false,
+  })
+
+  db.classrooms.create({
+    name: "Room 103",
+    code: "R103",
+    capacity: 60,
+    type: "lecture_hall",
+    facilities: ["Projector", "Whiteboard", "AC"],
+    location: "Block A, First Floor",
+    isAvailable: true,
+  })
+
+
+  db.classrooms.create({
+    name: "Room 104",
+    code: "R104",
+    capacity: 60,
+    type: "lecture_hall",
+    facilities: ["Projector", "Whiteboard", "AC"],
+    location: "Block A, First Floor",
+    isAvailable: true,
+  })
+
+  db.classrooms.create({
+    name: "Room 105",
+    code: "R105",
+    capacity: 60,
+    type: "lecture_hall",
+    facilities: ["Projector", "Whiteboard", "AC"],
+    location: "Block A, First Floor",
+    isAvailable: false,
+  })
+
+
+  db.classrooms.create({
+    name: "Room 106",
+    code: "R106",
+    capacity: 60,
+    type: "lecture_hall",
+    facilities: ["Projector", "Whiteboard", "AC"],
+    location: "Block A, First Floor",
+    isAvailable: true,
+  })
+
+
+  db.classrooms.create({
+    name: "Room 107",
+    code: "R101",
+    capacity: 60,
+    type: "lecture_hall",
+    facilities: ["Projector", "Whiteboard", "AC"],
+    location: "Block A, First Floor",
+    isAvailable: true,
+  })
+
+  db.classrooms.create({
+    name: "Lab 202",
+    code: "L202",
+    capacity: 30,
+    type: "lab",
+    facilities: ["Computers", "Projector", "AC"],
+    location: "Block B, Second Floor",
+    isAvailable: true,
+  })
+
+  db.classrooms.create({
+    name: "Lab 203",
+    code: "L03",
+    capacity: 30,
+    type: "lab",
+    facilities: ["Computers", "Projector", "AC"],
+    location: "Block A, Second Floor",
+    isAvailable: false,
+  })
+
+  db.classrooms.create({
+    name: "Lab 204",
+    code: "L204",
+    capacity: 30,
+    type: "lab",
+    facilities: ["Computers", "Projector", "AC"],
+    location: "Block B, Third Floor",
+    isAvailable: true,
+  })
+
   // Add sample batch
   db.batches.create({
     name: "CS 3rd Year A",
@@ -296,4 +638,45 @@ export const seedDatabase = () => {
     semester: 5,
     strength: 45,
   })
+
+  db.batches.create({
+    name: "CS 3rd Year B",
+    courseId: btech.id,
+    year: 3,
+    semester: 5,
+    strength: 45,
+  })
+
+  db.batches.create({
+    name: "CS 3rd Year C",
+    courseId: btech.id,
+    year: 3,
+    semester: 5,
+    strength: 45,
+  })
+
+  db.batches.create({
+    name: "CS 2rd Year A",
+    courseId: btech.id,
+    year: 2,
+    semester: 3,
+    strength: 75,
+  })
+
+  db.batches.create({
+    name: "CS 2rd Year B",
+    courseId: btech.id,
+    year: 2,
+    semester: 3,
+    strength: 75,
+  })
+  
+  db.batches.create({
+    name: "CS 2rd Year A",
+    courseId: btech.id,
+    year: 2,
+    semester: 3,
+    strength: 75,
+  })
+  
 }
