@@ -58,7 +58,7 @@ export default function AdminDashboard() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <Calendar className="h-8 w-8 text-blue-600" />
-              <h1 className="text-2xl font-bold text-gray-900">TimetableGen Pro</h1>
+              <h1 className="text-2xl font-bold text-gray-900">SchedGenie Pro</h1>
               <Badge variant="secondary">Admin</Badge>
             </div>
             <div className="flex items-center space-x-4">
